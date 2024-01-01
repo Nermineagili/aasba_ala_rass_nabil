@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginsignupComponent } from './loginsignup/loginsignup.component';
 import { FormsModule } from '@angular/forms';
+import { FromtacheComponent } from './fromtache/fromtache.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginsignupComponent
+    LoginsignupComponent,
+    FromtacheComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+<div class="taches">
+    <div *ngFor="let tache of taches; let i = index" class="tache">
+      <h3>{{ tache.titre }}</h3>
+      <p>{{ tache.description }}</p>
+      <p>Due Date: {{ tache.due_date }}</p>
+      <p>Propriétaire: {{ tache.proprietaire }}</p>
+     
+      <button (click)="modifierTache(i)">Modifier</button>
+      <button (click)="supprimerTache(i)">Supprimer</button>
+    </div>
+  </div>
+  
+ 
+  <div class="nouvelle-tache" *ngIf="showTaskForm">
+    <h2>Créer une nouvelle tâche</h2>
+    <form (submit)="creerTache()">
+      <input type="text" [(ngModel)]="titreTache" placeholder="Titre de la tâche" required>
+      <input type="text" [(ngModel)]="descriptionTache" placeholder="Description" required>
+      <input type="date" [(ngModel)]="dueDateTache" placeholder="Due Date" required>
+      <input type="text" [(ngModel)]="proprietaireTache" placeholder="Propriétaire" required>
+      <button type="submit">Créer</button>
+    </form>
+  </div>
+  
+
